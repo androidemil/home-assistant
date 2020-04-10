@@ -23,6 +23,7 @@ ATTR_URL_TITLE = "url_title"
 ATTR_PRIORITY = "priority"
 ATTR_RETRY = "retry"
 ATTR_SOUND = "sound"
+ATTR_DEVICE = "device"
 ATTR_HTML = "html"
 ATTR_CALLBACK_URL = "callback_url"
 ATTR_EXPIRE = "expire"
@@ -66,6 +67,7 @@ class PushoverNotificationService(BaseNotificationService):
         callback_url = data.get(ATTR_CALLBACK_URL)
         timestamp = data.get(ATTR_TIMESTAMP)
         sound = data.get(ATTR_SOUND)
+        device = data.get(ATTR_DEVICE)
         html = 1 if data.get(ATTR_HTML, False) else 0
 
         image = data.get(ATTR_ATTACHMENT)
@@ -108,6 +110,7 @@ class PushoverNotificationService(BaseNotificationService):
                     callback_url,
                     timestamp,
                     sound,
+                    device,
                     html,
                 )
             except ValueError as val_err:
