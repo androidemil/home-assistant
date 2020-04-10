@@ -103,7 +103,7 @@ class PushoverNotificationService(BaseNotificationService):
                     title,
                     url,
                     url_title,
-                    image,
+#                    image,
                     priority,
                     retry,
                     expire,
