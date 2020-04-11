@@ -99,18 +99,18 @@ class PushoverNotificationService(BaseNotificationService):
                 self.pushover.send_message(
                     self._user_key,
                     message,
-                    target,
+                    device,
                     title,
                     url,
                     url_title,
-#                    image,
+                    image,
                     priority,
                     retry,
                     expire,
                     callback_url,
                     timestamp,
                     sound,
-                    device=device,
+                    device = device,
                     html,
                 )
             except ValueError as val_err:
