@@ -110,7 +110,7 @@ class PushoverNotificationService(BaseNotificationService):
                     callback_url,
                     timestamp,
                     sound,
-                    device,
+                    device=device,
                     html,
                 )
             except ValueError as val_err:
